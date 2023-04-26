@@ -147,14 +147,13 @@ test:
         description: 有依赖需要升级
         color: 4E04B0
       ignore: 
-
 workflow:
   folded_projects:
   - test/workflow/Workflow.Nuget.Publish/Workflow.Nuget.Publish.csproj
   - test/workflow/Github.NET.Sdk/Github.NET.Sdk.csproj
   - test/workflow/Workflow.Initialization/Workflow.Initialization.csproj
   - test/workflow/Workflow.Runner/Workflow.Runner.csproj
-  - test/workflow/Github.NMSAcion.NET.Sdk/Github.NMSAcion.NET.Sdk.csproj
   - test/workflow/Solution.NET.Sdk/Solution.NET.Sdk.csproj
+  - test/workflow/Github.NMSAction.NET.Sdk/Github.NMSAction.NET.Sdk.csproj
   global_labels: 
   projects: []
