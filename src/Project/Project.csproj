@@ -11,8 +11,6 @@
 	  <PackageReleaseNotes>{release notes}</PackageReleaseNotes>
 	  <PackageTags>{search tags:1;2;3;}</PackageTags>
 	  <Product>{product description}</Product>
-	  <FileVersion>{file version}</FileVersion>
-	  <AssemblyVersion>{assembly version}</AssemblyVersion>
 	  -->
 
 	  <!-- 案例
@@ -20,20 +18,7 @@
 	  <PackageId>mynuget</PackageId>
 	  <PackageReleaseNotes>test</PackageReleaseNotes>
 	  <PackageTags>none</PackageTags>
-	  <FileVersion>0.1.0</FileVersion>
-	  <AssemblyVersion>0.1.0</AssemblyVersion>
 	   -->
 	   
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.123" />
-    <PackageReference Include="Dapper.StrongName" Version="2.0.78" />
-    <PackageReference Include="DotNetCore.Natasha.CSharp" Version="5.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Targets\" />
-  </ItemGroup>
-
 </Project>
