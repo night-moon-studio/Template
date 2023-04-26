@@ -1,0 +1,208 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BBADD7D9-2278-4E34-ACD7-E1FB1746ACC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C74D28EA-DD92-4474-A1BA-19F78BAC46AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmark", "benchmark", "{64F8A1BF-65BE-41BC-BCAC-EA22D9B836C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ut", "ut", "{9B6E93DC-337F-46BA-A516-E8F0891BF5EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{F8BD5F4B-B976-4FFA-8FD8-8DF8D8FFC262}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F468927-9FBF-47A8-98EF-1C7CCB1BFC9B}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		使用说明.txt = 使用说明.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarkProject", "test\benchmark\BenchmarkProject\BenchmarkProject.csproj", "{104ABFF4-2AF7-415E-A434-78B4C45EBE5B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject", "test\ut\UnitTestProject\UnitTestProject.csproj", "{D66DF63E-DA0E-4DDF-9655-0A7E23B29082}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflow", "workflow", "{AEE97FB6-D1CA-4923-BC22-F1178313ECE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow.Nuget.Publish", "test\workflow\Workflow.Nuget.Publish\Workflow.Nuget.Publish.csproj", "{E4F6F357-7B03-4BC1-B226-FCD9355E6AF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Github.NET.Sdk", "test\workflow\Github.NET.Sdk\Github.NET.Sdk.csproj", "{96699085-EEE0-4D8D-AC90-24C1057ACC0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "report.template", "report.template", "{E9797E12-44DE-425E-AC9A-8E22B8AB43AC}"
+	ProjectSection(SolutionItems) = preProject
+		.github\ISSUE_TEMPLATE\bug.yml = .github\ISSUE_TEMPLATE\bug.yml
+		.github\ISSUE_TEMPLATE\config.yml = .github\ISSUE_TEMPLATE\config.yml
+		.github\ISSUE_TEMPLATE\feature.yml = .github\ISSUE_TEMPLATE\feature.yml
+		.github\ISSUE_TEMPLATE\feedback.yml = .github\ISSUE_TEMPLATE\feedback.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "trigger", "trigger", "{3F38F9DE-CD8E-4398-B384-352BE469C037}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\test.yml = .github\workflows\test.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pr", "pr", "{15F494AB-94DF-4334-BD73-9F8ACF84E0C1}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\pr_archive.yml = .github\workflows\pr_archive.yml
+		.github\workflows\pr_label.yml = .github\workflows\pr_label.yml
+		.github\workflows\pr_recommend.yml = .github\workflows\pr_recommend.yml
+		.github\workflows\pr_test.yml = .github\workflows\pr_test.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "label", "label", "{750750E6-8576-47CC-A4E4-00CC385B0CDF}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\create_label_project.yml = .github\workflows\create_label_project.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "release", "release", "{458237F1-2DA5-4CD5-AE3F-736778B735E7}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\codecov.yml = .github\workflows\codecov.yml
+		.github\workflows\release.yml = .github\workflows\release.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dependency", "dependency", "{BE249E27-1BFF-4DB5-9B05-478E80C5E7B1}"
+	ProjectSection(SolutionItems) = preProject
+		.github\dependabot.yml = .github\dependabot.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "issue", "issue", "{EB036B9F-DD9D-42BD-A132-32A71F77D27C}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\block_user.yml = .github\workflows\block_user.yml
+		.github\workflows\issue_recommend.yml = .github\workflows\issue_recommend.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample1", "samples\Sample1\Sample1.csproj", "{B81C35F3-3471-4DFA-BA54-FD72A8BCCE28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "github", "github", "{2E2D3D84-84E7-42A6-B714-206210D023ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{7847691C-8981-4FDD-8BCE-F8259DCB11EE}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		CHANGELOG.md = CHANGELOG.md
+		.github\project.yml = .github\project.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{0800EC68-5998-471C-AE69-EE9B336B073F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scanner", "scanner", "{6A6B6CAB-7295-41F2-B36D-F2EC8A24D219}"
+	ProjectSection(SolutionItems) = preProject
+		scanner.bat = scanner.bat
+		scanner.sh = scanner.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nms.template", "nms.template", "{004D489C-21C8-4495-B29D-55CC6750927E}"
+	ProjectSection(SolutionItems) = preProject
+		.github\NMS_TEMPLATE\bug.issue.template = .github\NMS_TEMPLATE\bug.issue.template
+		.github\NMS_TEMPLATE\codecov.yml.template = .github\NMS_TEMPLATE\codecov.yml.template
+		.github\NMS_TEMPLATE\config.yml.template = .github\NMS_TEMPLATE\config.yml.template
+		.github\NMS_TEMPLATE\dependency.yml.template = .github\NMS_TEMPLATE\dependency.yml.template
+		.github\NMS_TEMPLATE\feature.issue.template = .github\NMS_TEMPLATE\feature.issue.template
+		.github\NMS_TEMPLATE\feedback.issue.template = .github\NMS_TEMPLATE\feedback.issue.template
+		.github\NMS_TEMPLATE\test.yml.template = .github\NMS_TEMPLATE\test.yml.template
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project", "src\Project\Project.csproj", "{131F5C66-58B1-4D48-BCC0-4E9CEFE1ADFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow.Initialization", "test\workflow\Workflow.Initialization\Workflow.Initialization.csproj", "{B17945DB-84EF-4734-B832-7ED855D865F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow.Runner", "test\workflow\Workflow.Runner\Workflow.Runner.csproj", "{23060A37-D3A2-4B7F-8FE5-840344C4A9AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3299CFFA-B88E-4038-B02F-EDC878739DC4}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2A50AC7B-49DF-4189-94C8-39CB4521BD63}"
+	ProjectSection(SolutionItems) = preProject
+		test\Directory.Build.props = test\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Github.NMSAcion.NET.Sdk", "test\workflow\Github.NMSAcion.NET.Sdk\Github.NMSAcion.NET.Sdk.csproj", "{A54BA6D1-ABB6-4C9D-9257-5CE8C2A585C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solution.NET.Sdk", "test\workflow\Solution.NET.Sdk\Solution.NET.Sdk.csproj", "{48D6BB1D-9392-4BF5-A6DD-46352740F158}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{104ABFF4-2AF7-415E-A434-78B4C45EBE5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104ABFF4-2AF7-415E-A434-78B4C45EBE5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104ABFF4-2AF7-415E-A434-78B4C45EBE5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104ABFF4-2AF7-415E-A434-78B4C45EBE5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D66DF63E-DA0E-4DDF-9655-0A7E23B29082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D66DF63E-DA0E-4DDF-9655-0A7E23B29082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D66DF63E-DA0E-4DDF-9655-0A7E23B29082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D66DF63E-DA0E-4DDF-9655-0A7E23B29082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4F6F357-7B03-4BC1-B226-FCD9355E6AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4F6F357-7B03-4BC1-B226-FCD9355E6AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4F6F357-7B03-4BC1-B226-FCD9355E6AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4F6F357-7B03-4BC1-B226-FCD9355E6AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96699085-EEE0-4D8D-AC90-24C1057ACC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96699085-EEE0-4D8D-AC90-24C1057ACC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96699085-EEE0-4D8D-AC90-24C1057ACC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96699085-EEE0-4D8D-AC90-24C1057ACC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81C35F3-3471-4DFA-BA54-FD72A8BCCE28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81C35F3-3471-4DFA-BA54-FD72A8BCCE28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81C35F3-3471-4DFA-BA54-FD72A8BCCE28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81C35F3-3471-4DFA-BA54-FD72A8BCCE28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131F5C66-58B1-4D48-BCC0-4E9CEFE1ADFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131F5C66-58B1-4D48-BCC0-4E9CEFE1ADFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131F5C66-58B1-4D48-BCC0-4E9CEFE1ADFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131F5C66-58B1-4D48-BCC0-4E9CEFE1ADFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B17945DB-84EF-4734-B832-7ED855D865F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B17945DB-84EF-4734-B832-7ED855D865F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B17945DB-84EF-4734-B832-7ED855D865F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B17945DB-84EF-4734-B832-7ED855D865F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23060A37-D3A2-4B7F-8FE5-840344C4A9AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23060A37-D3A2-4B7F-8FE5-840344C4A9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23060A37-D3A2-4B7F-8FE5-840344C4A9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23060A37-D3A2-4B7F-8FE5-840344C4A9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A54BA6D1-ABB6-4C9D-9257-5CE8C2A585C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A54BA6D1-ABB6-4C9D-9257-5CE8C2A585C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A54BA6D1-ABB6-4C9D-9257-5CE8C2A585C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A54BA6D1-ABB6-4C9D-9257-5CE8C2A585C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D6BB1D-9392-4BF5-A6DD-46352740F158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D6BB1D-9392-4BF5-A6DD-46352740F158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D6BB1D-9392-4BF5-A6DD-46352740F158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D6BB1D-9392-4BF5-A6DD-46352740F158}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64F8A1BF-65BE-41BC-BCAC-EA22D9B836C0} = {C74D28EA-DD92-4474-A1BA-19F78BAC46AD}
+		{9B6E93DC-337F-46BA-A516-E8F0891BF5EF} = {C74D28EA-DD92-4474-A1BA-19F78BAC46AD}
+		{104ABFF4-2AF7-415E-A434-78B4C45EBE5B} = {64F8A1BF-65BE-41BC-BCAC-EA22D9B836C0}
+		{D66DF63E-DA0E-4DDF-9655-0A7E23B29082} = {9B6E93DC-337F-46BA-A516-E8F0891BF5EF}
+		{AEE97FB6-D1CA-4923-BC22-F1178313ECE3} = {C74D28EA-DD92-4474-A1BA-19F78BAC46AD}
+		{E4F6F357-7B03-4BC1-B226-FCD9355E6AF7} = {AEE97FB6-D1CA-4923-BC22-F1178313ECE3}
+		{96699085-EEE0-4D8D-AC90-24C1057ACC0A} = {AEE97FB6-D1CA-4923-BC22-F1178313ECE3}
+		{E9797E12-44DE-425E-AC9A-8E22B8AB43AC} = {2E2D3D84-84E7-42A6-B714-206210D023ED}
+		{3F38F9DE-CD8E-4398-B384-352BE469C037} = {2E2D3D84-84E7-42A6-B714-206210D023ED}
+		{15F494AB-94DF-4334-BD73-9F8ACF84E0C1} = {3F38F9DE-CD8E-4398-B384-352BE469C037}
+		{750750E6-8576-47CC-A4E4-00CC385B0CDF} = {3F38F9DE-CD8E-4398-B384-352BE469C037}
+		{458237F1-2DA5-4CD5-AE3F-736778B735E7} = {3F38F9DE-CD8E-4398-B384-352BE469C037}
+		{BE249E27-1BFF-4DB5-9B05-478E80C5E7B1} = {3F38F9DE-CD8E-4398-B384-352BE469C037}
+		{EB036B9F-DD9D-42BD-A132-32A71F77D27C} = {3F38F9DE-CD8E-4398-B384-352BE469C037}
+		{B81C35F3-3471-4DFA-BA54-FD72A8BCCE28} = {F8BD5F4B-B976-4FFA-8FD8-8DF8D8FFC262}
+		{2E2D3D84-84E7-42A6-B714-206210D023ED} = {9F468927-9FBF-47A8-98EF-1C7CCB1BFC9B}
+		{7847691C-8981-4FDD-8BCE-F8259DCB11EE} = {9F468927-9FBF-47A8-98EF-1C7CCB1BFC9B}
+		{0800EC68-5998-471C-AE69-EE9B336B073F} = {7847691C-8981-4FDD-8BCE-F8259DCB11EE}
+		{6A6B6CAB-7295-41F2-B36D-F2EC8A24D219} = {7847691C-8981-4FDD-8BCE-F8259DCB11EE}
+		{004D489C-21C8-4495-B29D-55CC6750927E} = {7847691C-8981-4FDD-8BCE-F8259DCB11EE}
+		{131F5C66-58B1-4D48-BCC0-4E9CEFE1ADFD} = {BBADD7D9-2278-4E34-ACD7-E1FB1746ACC3}
+		{B17945DB-84EF-4734-B832-7ED855D865F8} = {AEE97FB6-D1CA-4923-BC22-F1178313ECE3}
+		{23060A37-D3A2-4B7F-8FE5-840344C4A9AD} = {AEE97FB6-D1CA-4923-BC22-F1178313ECE3}
+		{3299CFFA-B88E-4038-B02F-EDC878739DC4} = {7847691C-8981-4FDD-8BCE-F8259DCB11EE}
+		{2A50AC7B-49DF-4189-94C8-39CB4521BD63} = {7847691C-8981-4FDD-8BCE-F8259DCB11EE}
+		{A54BA6D1-ABB6-4C9D-9257-5CE8C2A585C0} = {AEE97FB6-D1CA-4923-BC22-F1178313ECE3}
+		{48D6BB1D-9392-4BF5-A6DD-46352740F158} = {AEE97FB6-D1CA-4923-BC22-F1178313ECE3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C979E179-0CB6-4D90-840A-96D7CA37C8A5}
+	EndGlobalSection
+EndGlobal

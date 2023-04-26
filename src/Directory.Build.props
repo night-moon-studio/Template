@@ -1,0 +1,52 @@
+<Project>
+
+	<Choose>
+		<When Condition="$(MSBuildProjectFullPath.Contains('$([MSBuild]::NormalizeDirectory('$(SolutionDir)', 'src'))'))">
+			<PropertyGroup>
+
+				<!-- 框架配置区   -->
+				<TargetFrameworks>netcoreapp3.1;net5.0;net6.0;net7.0;</TargetFrameworks>
+				<Nullable>enable</Nullable>
+				<LangVersion>preview</LangVersion>
+
+
+				
+				
+				<!-- 打包信息区域   -->
+				<!--<IsPackable>true</IsPackable>
+				<IncludeSymbols>true</IncludeSymbols>
+				<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+				<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+				<PackageProjectUrl>{project url}</PackageProjectUrl>
+				<Copyright>{author and collaborator}</Copyright>
+				<Company>{author company}</Company>
+				<Authors>{author name}</Authors>
+				<PackageIcon>{nuget package image}.png</PackageIcon>
+				<PackageLicenseFile>{library license}</PackageLicenseFile>-->
+
+				<!-- 打包信息区域-案例 -->
+				<!--
+				<IsPackable>true</IsPackable>
+				<IncludeSymbols>true</IncludeSymbols>
+				<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+				<Company>nms</Company>
+				<Authors>azulx</Authors>
+				<Copyright>azulx</Copyright>-->
+			
+				<NoWarn>1701;1702;0168;NETSDK1138;IDE0060;xUnit2000;CS0067;CS8321;CS0649;CS8604;CA1822;</NoWarn>
+			</PropertyGroup>
+
+			<!-- 资源输出区   -->
+			<!--<ItemGroup Condition=" '$(IsPackable)' != 'false'">
+				<None Include="$([MSBuild]::NormalizeDirectory('$(SolutionDir)', 'resources')){myImage}.png" Link="{nuget pack image}.png" Pack="true" PackagePath=""/>
+				<None Include="$([MSBuild]::NormalizeDirectory('$(SolutionDir)', 'resources')){myLicense}" Link="{library license}" Pack="true" PackagePath=""/>
+			</ItemGroup>-->
+
+			<!-- 项目引用区   -->
+			<!--<ItemGroup>
+				<PackageReference Include="{Custom Common Library}" Version="1.0.0" />
+			</ItemGroup>-->
+		</When>
+	</Choose>
+
+</Project>
