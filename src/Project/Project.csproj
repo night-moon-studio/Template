@@ -21,15 +21,4 @@
 	   -->
 	   
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.123" />
-    <PackageReference Include="Dapper.StrongName" Version="2.0.78" />
-    <PackageReference Include="DotNetCore.Natasha.CSharp" Version="5.2.2.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Targets\" />
-  </ItemGroup>
-
 </Project>
