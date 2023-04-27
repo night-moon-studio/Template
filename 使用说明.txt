@@ -54,9 +54,7 @@ Project 工程文件:
 	2. PackageReleaseNotes : nuget 包发版信息.
 	3. PackageTags : nuget 检索关键字.
 	4. Description : nuget 项目描述信息.
-	5. FileVersion : nuget 文件版本信息.
-	6. AssemblyVersion : nuget 生成程序集的版本信息.
-	7. Product: nuget 产品信息.
+	5. Product: nuget 产品信息.
 
 
 注意: 
@@ -156,7 +154,7 @@ Project 工程文件:
 			labels: 
 			dependency_config:
 			  type: nuget
-			  dependency_update_interval: monthly
+			  interval: monthly
 			  commit_prefix: '[DEPENDENCY SAMPLE]'
 			  special_time: 05:00
 			  special_time_zone: Asia/Harbin
