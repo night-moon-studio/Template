@@ -1,6 +1,8 @@
 ﻿
 ## 欢迎使用 Night Moon Studio 的开源模板.
 
+新一轮的需求搜集: https://github.com/night-moon-studio/Template/issues/6
+
 > 所有细微的配置请参考工程中的 [[使用说明.txt](https://github.com/night-moon-studio/Template/blob/main/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.txt)] 文档。
 
 
