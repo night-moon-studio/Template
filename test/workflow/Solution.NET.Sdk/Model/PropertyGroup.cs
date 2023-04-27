@@ -18,7 +18,7 @@
         }
         public void UpdateToCSProject(CSharpProject project)
         {
-            project.PackageName = this.PackageId;
+            project.PackageName = this.PackageId ?? string.Empty;
             project.TargetFramworks = new HashSet<string>();
             if (TargetFramework!=null)
             {
