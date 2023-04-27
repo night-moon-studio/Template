@@ -1,6 +1,5 @@
 ﻿
 using Solution.NET.Sdk.Model;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
