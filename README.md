@@ -1,8 +1,17 @@
-﻿# 2023/4/4 - 2023/4/11 整合管道功能到配置模板, 集中管理.
-
+﻿
 ## 欢迎使用 Night Moon Studio 的开源模板.
 
 > 所有细微的配置请参考工程中的 [[使用说明.txt](https://github.com/night-moon-studio/Template/blob/main/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.txt)] 文档。
+
+
+## 文章导航
+
+- [模板介绍](https://www.cnblogs.com/NMSLanX/p/17326728.html)
+- [项目及脚本介绍](https://www.cnblogs.com/NMSLanX/p/17328697.html)
+- [ISSUE 相关](https://www.cnblogs.com/NMSLanX/p/17328924.html)
+- [PR 相关](https://www.cnblogs.com/NMSLanX/p/17328962.html)
+- [发布相关](https://www.cnblogs.com/NMSLanX/p/17329521.html)
+- 从0到发布(编写中)
 
 
 ## 了解这款开源模板:
