@@ -33,7 +33,7 @@ issues_template_configs:
 - panel_name: " \U0001F91D 入组申请"
   file_name: invite
   panel_description: 希望能加入这个组织,为组织做出贡献.
-  pull_request_prefix: '[Invite]:'
+  pull_request_prefix: '[Invite]:入组申请'
   pull_request_labels:
   - name: invite
     description: Join in

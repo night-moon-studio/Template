@@ -1,7 +1,7 @@
 ---
 name: 🤝 入组申请
 about: 希望能加入这个组织,为组织做出贡献.
-title: '[Invite]:'
+title: '[Invite]:入组申请'
 labels: invite
 
 ---
@@ -19,5 +19,4 @@ labels: invite
 - 积极响应需求/问题/代码审阅等任务.
 - 以平和的语气及文字接收或提出建议及意见.
 
-<br/>
 #### 此致敬礼!
