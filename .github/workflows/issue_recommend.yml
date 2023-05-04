@@ -18,6 +18,7 @@ env:
 jobs:
   recommend:
     runs-on: ubuntu-latest
+    if: contains(github.event.issue.title, '入组申请') == false
     steps:
     - uses: actions/checkout@v3
 

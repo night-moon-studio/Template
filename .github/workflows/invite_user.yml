@@ -13,7 +13,7 @@ on:
 
 env:
   OWNER_NAME: ${{ github.repository_owner }}
-  USER_EMAIL: ${{ github.event.issue.title }}
+  USER_ID: ${{ github.event.issue.sender.id }}
   GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
   WORKER_NAME: USER_INVITE
 
@@ -21,7 +21,7 @@ jobs:
 
   block_user:
     runs-on: ubuntu-latest
-    if: github.event.label.name == 'invite'
+    if: github.event.label.name == 'invite-agree'
     steps:
 
     - uses: actions/checkout@v3
@@ -32,8 +32,6 @@ jobs:
       #    dotnet-version: '6.x'
           
     - name: ☠️ Block User
-      run: |
-        echo '${{ toJSON(github) }}'
-      # dotnet test './test/workflow/Workflow.Runner' --nologo -c Release
+      run: dotnet test './test/workflow/Workflow.Runner' --nologo -c Release
 
 

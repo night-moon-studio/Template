@@ -20,7 +20,7 @@ namespace Workflow.Runner
                 {
                     Assert.Fail(token);
                 }
-                if (!NMSGithubSdk.TryGetEnviromentValue(out string userEmail, "USER_EMAIL", "${{ github.event.repository.name }}"))
+                if (!NMSGithubSdk.TryGetEnviromentValue(out string userEmail, "USER_ID", "${{ github.event.repository.name }}"))
                 {
                     Assert.Fail(userEmail);
                 }

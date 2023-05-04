@@ -684,10 +684,10 @@ namespace Github.NET.Sdk
             }
         }
 
-        public static async ValueTask<(bool, string)> InviteByUserEmailAsync(string org, string email)
+        public static async ValueTask<(bool, string)> InviteByUserEmailAsync(string org, long invitee_id)
         {
 
-            var content = JsonContent.Create(new { org, email });
+            var content = JsonContent.Create(new { org, invitee_id });
             var response = await _webApi.PostAsync($"/orgs/{org}/invitations", content);
             if (response.StatusCode ==  System.Net.HttpStatusCode.Created)
             {
