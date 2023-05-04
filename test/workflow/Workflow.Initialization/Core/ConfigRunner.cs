@@ -3,6 +3,7 @@ using Github.NMSAcion.NET.Sdk.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -48,7 +49,7 @@ namespace Workflow.Initialization.Core
                     var templatePath = Path.Combine(NMSTemplateRoot, $"{item.FileName}.issue.template");
                     if (File.Exists(templatePath))
                     {
-                        var configPath = Path.Combine(IssueTemplateRoot, $"{item.FileName}.yml");
+                        var configPath = Path.Combine(IssueTemplateRoot, $"{item.FileName}.{item.FileType}");
                         var content = File.ReadAllText(templatePath);
                         content = content.Replace("${{name}}", $"name:{item.PanelName}");
                         if (item.PanelDescription == null)

@@ -21,7 +21,7 @@ jobs:
 
   block_user:
     runs-on: ubuntu-latest
-    if: github.event.label.name == 'invite-agree'
+    if: github.event.label.name == 'invite'
     steps:
 
     - uses: actions/checkout@v3

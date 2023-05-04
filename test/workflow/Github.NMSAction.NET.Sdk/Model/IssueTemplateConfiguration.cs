@@ -1,9 +1,4 @@
 ﻿using Github.NET.Sdk.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Github.NMSAcion.NET.Sdk.Model
 {
@@ -15,5 +10,6 @@ namespace Github.NMSAcion.NET.Sdk.Model
         public string? PullRequestPrefix { get; set; }
         public GithubLabelBase[] PullRequestLabels { get; set; } = new GithubLabelBase[0];
         public GithubLabelBase[] OtherOptionLabels { get; set; }= new GithubLabelBase[0];
+        public string FileType { get; set; } = "yml";
     }
 }

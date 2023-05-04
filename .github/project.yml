@@ -9,6 +9,7 @@ issues_template_configs:
     description: Something isn't working
     color: d73a4a
   other_option_labels: []
+  file_type: yml
 - panel_name: " \U0001F4A1 新的想法 (Feature request)"
   file_name: feature
   panel_description: 我知道您有一个比较赞的想法想和我说 (Suggest an idea for this project).
@@ -18,6 +19,7 @@ issues_template_configs:
     description: New feature or request
     color: a2eeef
   other_option_labels: []
+  file_type: yml
 - panel_name: " \U0001F4E3 和作者进行灵魂沟通 (Feedback)"
   file_name: feedback
   panel_description: 来聊聊咱这个库好在哪里,差在哪里和你的期待在哪里 (Give us general feedback about the repository).
@@ -27,6 +29,7 @@ issues_template_configs:
     description: Something want to say
     color: d4c5f9
   other_option_labels: []
+  file_type: yml
 - panel_name: " \U0001F91D 入组申请"
   file_name: invite
   panel_description: 希望能加入这个组织,为组织做出贡献.
@@ -39,6 +42,7 @@ issues_template_configs:
   - name: invite-agree
     description: Agree user to join in this org
     color: 6ECA76
+  file_type: md
 action:
   folded_projects: 
   global_labels: 
