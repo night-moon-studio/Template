@@ -38,7 +38,7 @@ issues_template_configs:
   other_option_labels:
   - name: invite-agree
     description: Agree user to join in this org
-    color: 32DBAB
+    color: 6ECA76
 action:
   folded_projects: 
   global_labels: 
