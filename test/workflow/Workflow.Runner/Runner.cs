@@ -20,9 +20,9 @@ namespace Workflow.Runner
                 {
                     Assert.Fail(token);
                 }
-                if (!NMSGithubSdk.TryGetEnviromentValue(out string userEmail, "USER_ID", "${{ github.event.repository.name }}"))
+                if (!NMSGithubSdk.TryGetEnviromentValue(out string userId, "USER_ID", "${{ github.event.repository.name }}"))
                 {
-                    Assert.Fail(userEmail);
+                    Assert.Fail(userId);
                 }
                 if (!NMSGithubSdk.TryGetEnviromentValue(out string ownerName, "OWNER_NAME", "${{ github.repository_owner }}"))
                 {
@@ -32,7 +32,7 @@ namespace Workflow.Runner
                 NMSGithubSdk.SetGraphSecretByEnvKey("GITHUB_TOKEN");
                 NMSGithubSdk.SetApiSecretByEnKey("GITHUB_TOKEN");
 
-                (var execResult, string error) = await NMSGithubSdk.InviteByUserEmailAsync(ownerName, userEmail);
+                (var execResult, string error) = await NMSGithubSdk.InviteByUserEmailAsync(ownerName, Convert.ToInt64(userId));
                 if (error != string.Empty)
                 {
                     Assert.Fail(error);

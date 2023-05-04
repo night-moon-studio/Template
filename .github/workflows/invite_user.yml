@@ -13,13 +13,13 @@ on:
 
 env:
   OWNER_NAME: ${{ github.repository_owner }}
-  USER_ID: ${{ github.event.issue.sender.id }}
+  USER_ID: ${{ github.event.issue.user.id }}
   GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
   WORKER_NAME: USER_INVITE
 
 jobs:
 
-  block_user:
+  invite_user:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'invite-agree'
     steps:
@@ -31,7 +31,7 @@ jobs:
       #  with:
       #    dotnet-version: '6.x'
           
-    - name: ☠️ Block User
+    - name: 🤝 Invite User
       run: dotnet test './test/workflow/Workflow.Runner' --nologo -c Release
 
 
