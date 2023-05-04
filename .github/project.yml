@@ -24,6 +24,14 @@ issues_template_configs:
   - name: feedback
     description: Something want to say
     color: d4c5f9
+- panel_name: " \U0001F91D入组申请"
+  file_name: invite
+  panel_description: 希望能加入这个组织,为组织做出贡献.
+  pull_request_prefix: '[Invite]:'
+  pull_request_labels:
+  - name: invite
+    description: Join in
+    color: 32DBAB
 action:
   folded_projects: 
   global_labels: 
