@@ -41,7 +41,12 @@ namespace Workflow.Runner
                 {
                     Assert.Fail(error);
                 }
-                (execResult, error) = await GithubSdk.IssueOrPullRequest.AddCommentAsync(issueId, $"恭喜您!请确认入组:https://github.com/orgs/{ownerName}/invitation");
+                (execResult, error) = await GithubSdk.IssueOrPullRequest.AddCommentAsync(issueId, $"恭喜您! 请确认入组 : https://github.com/orgs/{ownerName}/invitation");
+                if (error != string.Empty)
+                {
+                    Assert.Fail(error);
+                }
+                (execResult, error) = await GithubSdk.Issue.CloseAsync(issueId);
                 if (error != string.Empty)
                 {
                     Assert.Fail(error);

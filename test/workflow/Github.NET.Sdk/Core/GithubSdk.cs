@@ -98,6 +98,19 @@ namespace Github.NET.Sdk
                     .Child("id")).GraphResultAsync<GithubGraphReturn>();
             return (result?.Data?.DeleteIssue?.Repository?.Id != null, error);
         }
+        public async ValueTask<(bool, string)> CloseAsync(string issueId)
+        {
+            //d4c5f9
+            (var result, string error) = await GithubGraphRequest
+                .Mutation()
+                .Define("updateIssue", p => p
+                    .WithParameter("id", issueId)
+                    .WithParameter("state", "CLOSED", false)
+                    )
+                .Child("repository", e => e
+                    .Child("id")).GraphResultAsync<GithubGraphReturn>();
+            return (result?.Data?.UpdateIssue != null, error);
+        }
         public async Task<(GithubIssueConnections?, string)> GetsAsync(string owner, string repo, int count, bool? status = null, string? cursor = null)
         {
             (var result, string error) = await GithubGraphRequest

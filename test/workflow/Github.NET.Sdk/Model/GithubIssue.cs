@@ -14,7 +14,10 @@
         public GithubIssue Node { get; set; } = default!;
         public string? Cursor { get; set; }
     }
-
+    public sealed class UpdateIssue
+    {
+        public GithubIssue? Issue { get; set; }
+    }
     public sealed class WrapperGithubIssue
     {
         public GithubIssue Node { get; set; } = default!;

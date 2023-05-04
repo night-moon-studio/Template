@@ -11,6 +11,7 @@ namespace Github.NET.Sdk
         public GithubOrganization? Organization { get; set; }
         public GithubRepository? Repository { get; set; }
         public WrapperGithubRepository? DeleteIssue { get; set; }
+        public UpdateIssue? UpdateIssue { get; set; }
         public WrapperProject? CreateProjectV2 { get; set; }
         public WrapperProject? UpdateProjectV2 { get; set; }
         public WrapperGithubProjectItem? UpdateProjectV2ItemFieldValue { get; set; }
