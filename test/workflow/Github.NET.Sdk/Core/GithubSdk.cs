@@ -107,7 +107,7 @@ namespace Github.NET.Sdk
                     .WithParameter("id", issueId)
                     .WithParameter("state", "CLOSED", false)
                     )
-                .Child("repository", e => e
+                .Child("issue", e => e
                     .Child("id")).GraphResultAsync<GithubGraphReturn>();
             return (result?.Data?.UpdateIssue != null, error);
         }

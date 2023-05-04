@@ -47,7 +47,7 @@ namespace Workflow.Runner
                     Assert.Fail(error);
                 }
                 (execResult, error) = await GithubSdk.Issue.CloseAsync(issueId);
-                if (error != string.Empty)
+                if (!execResult)
                 {
                     Assert.Fail(error);
                 }
