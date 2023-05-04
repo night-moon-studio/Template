@@ -14,6 +14,7 @@ on:
 env:
   OWNER_NAME: ${{ github.repository_owner }}
   USER_ID: ${{ github.event.issue.user.id }}
+  ISSUE_ID: ${{ github.event.issue.node_id }}
   GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
   WORKER_NAME: USER_INVITE
 

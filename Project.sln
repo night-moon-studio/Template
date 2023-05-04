@@ -35,6 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "report.template", "report.t
 		.github\ISSUE_TEMPLATE\config.yml = .github\ISSUE_TEMPLATE\config.yml
 		.github\ISSUE_TEMPLATE\feature.yml = .github\ISSUE_TEMPLATE\feature.yml
 		.github\ISSUE_TEMPLATE\feedback.yml = .github\ISSUE_TEMPLATE\feedback.yml
+		.github\ISSUE_TEMPLATE\invite.md = .github\ISSUE_TEMPLATE\invite.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "trigger", "trigger", "{3F38F9DE-CD8E-4398-B384-352BE469C037}"
@@ -69,6 +70,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "issue", "issue", "{EB036B9F-DD9D-42BD-A132-32A71F77D27C}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\block_user.yml = .github\workflows\block_user.yml
+		.github\workflows\invite_user.yml = .github\workflows\invite_user.yml
 		.github\workflows\issue_recommend.yml = .github\workflows\issue_recommend.yml
 	EndProjectSection
 EndProject
@@ -100,6 +102,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nms.template", "nms.templat
 		.github\NMS_TEMPLATE\dependency.yml.template = .github\NMS_TEMPLATE\dependency.yml.template
 		.github\NMS_TEMPLATE\feature.issue.template = .github\NMS_TEMPLATE\feature.issue.template
 		.github\NMS_TEMPLATE\feedback.issue.template = .github\NMS_TEMPLATE\feedback.issue.template
+		.github\NMS_TEMPLATE\invite.issue.template = .github\NMS_TEMPLATE\invite.issue.template
 		.github\NMS_TEMPLATE\test.yml.template = .github\NMS_TEMPLATE\test.yml.template
 	EndProjectSection
 EndProject

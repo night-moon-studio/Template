@@ -20,7 +20,11 @@ namespace Workflow.Runner
                 {
                     Assert.Fail(token);
                 }
-                if (!NMSGithubSdk.TryGetEnviromentValue(out string userId, "USER_ID", "${{ github.event.repository.name }}"))
+                if (!NMSGithubSdk.TryGetEnviromentValue(out string userId, "USER_ID", "${{ github.event.issue.user.id }}"))
+                {
+                    Assert.Fail(userId);
+                }
+                if (!NMSGithubSdk.TryGetEnviromentValue(out string issueId, "ISSUE_ID", "${{ github.event.issue.node_id }}"))
                 {
                     Assert.Fail(userId);
                 }
@@ -33,6 +37,11 @@ namespace Workflow.Runner
                 NMSGithubSdk.SetApiSecretByEnKey("GITHUB_TOKEN");
 
                 (var execResult, string error) = await NMSGithubSdk.InviteByUserEmailAsync(ownerName, Convert.ToInt64(userId));
+                if (error != string.Empty)
+                {
+                    Assert.Fail(error);
+                }
+                (execResult, error) = await GithubSdk.IssueOrPullRequest.AddCommentAsync(issueId, $"恭喜您!请确认入组:https://github.com/orgs/{ownerName}/invitation");
                 if (error != string.Empty)
                 {
                     Assert.Fail(error);
