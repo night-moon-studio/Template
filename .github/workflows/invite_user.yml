@@ -1,0 +1,39 @@
+name: Invite User By Label
+
+on:
+  #push:
+  #  branches:
+  #    - 'main'
+  #  paths:
+  #    - '.github/workflows/block_user.yml'
+
+  issues:
+    types:
+      - labeled
+
+env:
+  OWNER_NAME: ${{ github.repository_owner }}
+  USER_EMAIL: ${{ github.event.issue.title }}
+  GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
+  WORKER_NAME: USER_INVITE
+
+jobs:
+
+  block_user:
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'invite-agree'
+    steps:
+
+    - uses: actions/checkout@v3
+
+      #- name: 🔨 Setup .NET 6.X SDK
+      #  uses: actions/setup-dotnet@v3
+      #  with:
+      #    dotnet-version: '6.x'
+          
+    - name: ☠️ Block User
+      run: |
+        echo '${{ toJSON(github) }}'
+      # dotnet test './test/workflow/Workflow.Runner' --nologo -c Release
+
+

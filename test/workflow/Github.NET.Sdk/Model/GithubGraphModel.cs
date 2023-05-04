@@ -8,6 +8,7 @@ namespace Github.NET.Sdk
     }
     public sealed class GithubData
     {
+        public GithubOrganization? Organization { get; set; }
         public GithubRepository? Repository { get; set; }
         public WrapperGithubRepository? DeleteIssue { get; set; }
         public WrapperProject? CreateProjectV2 { get; set; }

@@ -13,6 +13,7 @@ namespace Github.NMSAcion.NET.Sdk.Model
         public string FileName { get; set; } = string.Empty;
         public string? PanelDescription { get; set; }
         public string? PullRequestPrefix { get; set; }
-        public GithubLabelBase[]? PullRequestLabels { get; set; }
+        public GithubLabelBase[] PullRequestLabels { get; set; } = new GithubLabelBase[0];
+        public GithubLabelBase[] OtherOptionLabels { get; set; }= new GithubLabelBase[0];
     }
 }

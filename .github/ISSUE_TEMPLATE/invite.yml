@@ -1,4 +1,4 @@
-name: 🤝入组申请
+name: 🤝 入组申请
 description: 希望能加入这个组织,为组织做出贡献.
 title: "[Invite]:"
 labels: ["invite"]
@@ -6,8 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        #### 尊敬的组织成员,你们好:
-        我希望能够成为组织中的一员,我承诺遵守以下组织开发原则:
+        #### 尊敬的组织成员:
+        你们好,我希望能够成为该组织中的一员,为组织做出贡献,我承诺遵守以下组织开发原则:
         - 深度学习或贡献某个开源项目.
         - 不故意无理由的诋毁竞品库.
         - 不向自己参与的项目提交恶意或反人类的代码及注释.
@@ -19,12 +19,11 @@ body:
         - 以平和的语气及文字接收或提出建议及意见.
         此致敬礼.
 
-
   - type: input
     id: contact
     attributes:
       label: 📞 我的联系方式(Contact Details).
-      description: 如果我们需要进一步的沟通,如何找到您? (How can we get in touch with you if we need more info?)
+      description: 
       placeholder: ex. email@example.com
     validations:
       required: false

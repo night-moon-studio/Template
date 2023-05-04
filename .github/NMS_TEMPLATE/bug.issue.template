@@ -14,7 +14,7 @@ body:
       label: ⚙️ OS
       description: 您用的是什么系统?
       options:
-        - Windows(Default)
+        - Windows (Default)
         - Linux
         - Android
         - Apple
@@ -25,7 +25,7 @@ body:
       label: ⚙️ Architecture
       description: 芯片指令集是哪种?
       options:
-        - Any(Default)
+        - Any (Default)
         - Arm64
         - Arm32
         - x64 

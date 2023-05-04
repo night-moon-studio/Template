@@ -11,6 +11,35 @@ namespace Workflow.Runner
     [Trait("管道功能", "执行器")]
     public class Runner
     {
+        [Fact(DisplayName = "标签邀请用户")]
+        public async Task InviteUser()
+        {
+            if (NMSGithubSdk.JudgeCurrnetWorker("USER_INVITE"))
+            {
+                if (!NMSGithubSdk.TryGetTokenFromEnviroment(out string token, "GITHUB_TOKEN"))
+                {
+                    Assert.Fail(token);
+                }
+                if (!NMSGithubSdk.TryGetEnviromentValue(out string userEmail, "USER_EMAIL", "${{ github.event.repository.name }}"))
+                {
+                    Assert.Fail(userEmail);
+                }
+                if (!NMSGithubSdk.TryGetEnviromentValue(out string ownerName, "OWNER_NAME", "${{ github.repository_owner }}"))
+                {
+                    Assert.Fail(ownerName);
+                }
+
+                NMSGithubSdk.SetGraphSecretByEnvKey("GITHUB_TOKEN");
+                NMSGithubSdk.SetApiSecretByEnKey("GITHUB_TOKEN");
+
+                (var execResult, string error) = await NMSGithubSdk.InviteByUserEmailAsync(ownerName, userEmail);
+                if (error != string.Empty)
+                {
+                    Assert.Fail(error);
+                }
+            }
+        }
+
         [Fact(DisplayName = "标签屏蔽用户")]
         public async Task BlockUser()
         {

@@ -192,15 +192,18 @@ public static class SolutionConfigurationExtension
         {
             for (int i = 0; i < current.IssuesTemplateConfigs.Length; i += 1)
             {
-                var labels = current.IssuesTemplateConfigs[i].PullRequestLabels;
-                if (labels != null)
+                foreach (var label in current.IssuesTemplateConfigs[i].PullRequestLabels)
                 {
-                    foreach (var label in labels)
+                    if (!cache.ContainsKey(label.Name))
                     {
-                        if (!cache.ContainsKey(label.Name))
-                        {
-                            cache[label.Name] = label;
-                        }
+                        cache[label.Name] = label;
+                    }
+                }
+                foreach (var label in current.IssuesTemplateConfigs[i].OtherOptionLabels)
+                {
+                    if (!cache.ContainsKey(label.Name))
+                    {
+                        cache[label.Name] = label;
                     }
                 }
             }

@@ -1,5 +1,6 @@
 ﻿using Github.NET.Sdk.Model;
 using System.Linq;
+using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 
@@ -681,6 +682,22 @@ namespace Github.NET.Sdk
                 }
                 return (false, await response.Content.ReadAsStringAsync());
             }
+        }
+
+        public static async ValueTask<(bool, string)> InviteByUserEmailAsync(string org, string email)
+        {
+
+            var content = JsonContent.Create(new { org, email });
+            var response = await _webApi.PostAsync($"/orgs/{org}/invitations", content);
+            if (response.StatusCode ==  System.Net.HttpStatusCode.Created)
+            {
+                return (true, string.Empty);
+            }
+            else
+            {
+                return (false, await response.Content.ReadAsStringAsync());
+            }
+
         }
     }
 }
