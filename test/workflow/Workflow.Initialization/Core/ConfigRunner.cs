@@ -52,30 +52,61 @@ namespace Workflow.Initialization.Core
                         var configPath = Path.Combine(IssueTemplateRoot, $"{item.FileName}.{item.FileType}");
                         var content = File.ReadAllText(templatePath);
                         content = content.Replace("${{name}}", $"name:{item.PanelName}");
-                        if (item.PanelDescription == null)
+                        if (item.FileType == "yml")
                         {
-                            content = content.Replace("${{description}}", "");
+                            if (item.PanelDescription == null)
+                            {
+                                content = content.Replace("${{description}}", "");
+                            }
+                            else
+                            {
+                                content = content.Replace("${{description}}", $"description: {item.PanelDescription}");
+                            }
+                            if (item.PullRequestPrefix == null)
+                            {
+                                content = content.Replace("${{title}}", "");
+                            }
+                            else
+                            {
+                                content = content.Replace("${{title}}", $"title: \"{item.PullRequestPrefix}\"");
+                            }
+                            if (item.PullRequestLabels.Length == 0)
+                            {
+                                content = content.Replace("${{labels}}", "");
+                            }
+                            else
+                            {
+                                content = content.Replace("${{labels}}", $"labels: [\"{string.Join("\",\"", item.PullRequestLabels.Select(item => item.Name))}\"]");
+                            }
                         }
-                        else
+                        else if(item.FileType == "md")
                         {
-                            content = content.Replace("${{description}}", $"description: {item.PanelDescription}");
+                            if (item.PanelDescription == null)
+                            {
+                                content = content.Replace("${{description}}", "about");
+                            }
+                            else
+                            {
+                                content = content.Replace("${{description}}", $"about: {item.PanelDescription}");
+                            }
+                            if (item.PullRequestPrefix == null)
+                            {
+                                content = content.Replace("${{title}}", "");
+                            }
+                            else
+                            {
+                                content = content.Replace("${{title}}", $"title: '{item.PullRequestPrefix}'");
+                            }
+                            if (item.PullRequestLabels.Length == 0)
+                            {
+                                content = content.Replace("${{labels}}", "");
+                            }
+                            else
+                            {
+                                content = content.Replace("${{labels}}", $"labels: {string.Join(",", item.PullRequestLabels.Select(item => item.Name))}");
+                            }
                         }
-                        if (item.PullRequestPrefix == null)
-                        {
-                            content = content.Replace("${{title}}", "");
-                        }
-                        else
-                        {
-                            content = content.Replace("${{title}}", $"title: \"{item.PullRequestPrefix}\"");
-                        }
-                        if (item.PullRequestLabels == null)
-                        {
-                            File.WriteAllText(configPath, content.Replace("${{labels}}", ""));
-                        }
-                        else
-                        {
-                            File.WriteAllText(configPath, content.Replace("${{labels}}", $"labels: [\"{string.Join("\",\"", item.PullRequestLabels.Select(item => item.Name))}\"]"));
-                        }
+                        File.WriteAllText(configPath, content);
                     }
                 }
             }
