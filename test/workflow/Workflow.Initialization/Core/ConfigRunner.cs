@@ -408,8 +408,6 @@ namespace Workflow.Initialization.Core
                         content = csprojContent.Replace("</Project>", "\t" + projectBuilder.ToString());
                     }
                     File.WriteAllText(csProjFilePath, content);
-
-
                 }
             }
         }
@@ -428,6 +426,7 @@ namespace Workflow.Initialization.Core
             var projectMapper = collection.Projects.ToDictionary(item => item.Id, item => item);
 
             Regex buildReg = new Regex("<PackageId>.*?</PackageId>", RegexOptions.Singleline | RegexOptions.Compiled);
+            Regex propertyGroupReg = new Regex("</PropertyGroup>");
             foreach (var project in solutionInfo.Src.Projects)
             {
 
@@ -444,7 +443,7 @@ namespace Workflow.Initialization.Core
                 else
                 {
                     newPackageId += "\r\n\t</PropertyGroup>";
-                    content = csprojContent.Replace("</PropertyGroup>", "\t" + newPackageId);
+                    content = propertyGroupReg.Replace(csprojContent, "\t" + newPackageId, 1);
                 }
                 File.WriteAllText(file, content);
 
