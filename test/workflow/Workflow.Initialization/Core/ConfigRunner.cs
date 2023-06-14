@@ -146,7 +146,7 @@ namespace Workflow.Initialization.Core
 
             static string GetUTTestTaskString(string projectName, string projectFolder)
             {
-                return $"    - name: 🚦 {projectName} UT Test\r\n      run: dotnet test './{projectFolder}' --nologo -c Release";
+                return $"    - name: 🚦 {projectName} UT Test\r\n      run: dotnet test './{projectFolder}' --nologo -c Release -l \"trx;LogFileName=test-log-{projectName}.trx\" --results-directory \"./testlog/\"";
             }
         }
 
