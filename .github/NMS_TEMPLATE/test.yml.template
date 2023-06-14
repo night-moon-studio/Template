@@ -30,6 +30,7 @@ ${{nms.tests}}
     - uses: dorny/test-reporter@v1
       with:
         artifact: /test-log-(.*)/             # artifact name
-        name: Xunit Reporter              # Name of the check run which will be created
-        path: 'testlog/*.trx'                     # Path to test results (inside artifact .zip)
-        reporter: dotnet-trx              # Format of test results
+        name: Xunit Reporter                  # Name of the check run which will be created
+        path: testlog/test-log-*.trx          # Path to test results (inside artifact .zip)
+        reporter: dotnet-trx                  # Format of test results
+        token: ${{ secrets.REPO_GITHUB_TOKEN }}
