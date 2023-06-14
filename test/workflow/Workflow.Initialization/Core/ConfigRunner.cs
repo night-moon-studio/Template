@@ -144,6 +144,7 @@ namespace Workflow.Initialization.Core
                 File.Delete(ymlFile);
             }
 
+            //UT测试以及报告输出
             static string GetUTTestTaskString(string projectName, string projectFolder)
             {
                 return $"    - name: 🚦 {projectName} UT Test\r\n      run: dotnet test './{projectFolder}' --nologo -c Release -l \"trx;LogFileName=test-log-{projectName}.trx\" --results-directory \"./testlog/\"";
