@@ -31,7 +31,7 @@ jobs:
 
 
     - name: Create Report
-      uses: dorny/test-reporter@v1
+      uses: dorny/test-reporter@v1.6.0
       with:
         name: Xunit Reporter                  # Name of the check run which will be created
         path: '*/testlogs/*.xml'              # Path to test results (inside artifact .zip)
