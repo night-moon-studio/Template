@@ -26,19 +26,14 @@ jobs:
           7.0.x
 
     - name: 🚦 UnitTestProject UT Test
-      run: dotnet test './test/ut/UnitTestProject' --nologo -c Release -l "trx;LogFileName=UnitTestProject.trx" --results-directory "./testlogs/"
+      run: dotnet test './test/ut/UnitTestProject' --nologo -c Release -l "trx;LogFileName=UnitTestProject.xml" --results-directory "./testlogs/"
 
 
-    - name: Upload Unit Test Results
-      uses: actions/upload-artifact@v2
-      with:
-        name: unit-test-results
-        path: './testlog/*.trx'
 
     - name: Create Report
       uses: dorny/test-reporter@v1
       with:
         name: Xunit Reporter                  # Name of the check run which will be created
-        path: 'testlogs/*.trx'                   # Path to test results (inside artifact .zip)
+        path: '*/testlogs/*.xml'              # Path to test results (inside artifact .zip)
         reporter: dotnet-trx                  # Format of test results
         token: ${{ secrets.REPO_GITHUB_TOKEN }}
