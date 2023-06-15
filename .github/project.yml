@@ -54,7 +54,10 @@ action:
     project_name: Action
     package_name: ''
     project_folder: .github
-    labels: 
+    labels:
+    - name: pr_action
+      description: 此次提交包含 [管道功能] 相关的改动.
+      color: 68E0F8
     dependency_config:
       type: github-actions
       interval: monthly
