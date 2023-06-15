@@ -557,11 +557,15 @@ namespace Github.NET.Sdk
                         return (null, "创建标签失败,颜色池已耗尽,更多的颜色建议在环境变量中添加:如 bug => env:  BUG_LABEL_COLOR: #xxx");
                     }
                 }
-                if (createLabel.Description == string.Empty)
+                if (string.IsNullOrEmpty(createLabel.Description))
                 {
                     if (specialColor != null)
                     {
                         createLabel.Description = specialDescription;
+                    }
+                    else
+                    {
+                        createLabel.Description = "";
                     }
                 }
 
