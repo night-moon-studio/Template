@@ -26,12 +26,16 @@ jobs:
           7.0.x
 
 ${{nms.tests}}
-
+    - name: Upload dotnet test results
+      uses: actions/upload-artifact@v3
+      with:
+      name: dotnet-results
+      path: TestResults
 
     - name: Create Report
       uses: dorny/test-reporter@v1.6.0
       with:
-        name: Xunit Reporter                  # Name of the check run which will be created
-        path: 'testlogs/*.trx'                # Path to test results (inside artifact .zip)
+        name: XUnit Reporter                  # Name of the check run which will be created
+        path: 'TestResults/*.trx'             # Path to test results (inside artifact .zip)
         reporter: dotnet-trx                  # Format of test results
         token: ${{ secrets.REPO_GITHUB_TOKEN }}
