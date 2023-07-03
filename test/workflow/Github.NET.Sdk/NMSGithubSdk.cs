@@ -1,6 +1,7 @@
 ﻿using Github.NET.Sdk.Model;
 using System.Linq;
 using System.Net.Http.Json;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 
@@ -85,6 +86,7 @@ namespace Github.NET.Sdk
 
             if (issues != null)
             {
+
                 (var recommends, error) = await RecommendHelper.RecommendAsync(
                     sourceTitle, 
                     issues.Select(item => new RecommendInfoModel { Id = item.Id, Number = item.Number, Title = item.Title, Url = item.Url }), 
@@ -92,6 +94,7 @@ namespace Github.NET.Sdk
                 if (recommends != null)
                 {
                     var comment = commentAction(recommends);
+                    GithubGraphRequest.RemoveSecretKey();
                     (var commentResult, error) = await GithubSdk.IssueOrPullRequest.AddCommentAsync(currentItemId, comment);
                     if (!commentResult)
                     {
