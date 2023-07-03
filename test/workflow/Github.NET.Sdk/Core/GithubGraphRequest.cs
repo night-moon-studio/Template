@@ -25,14 +25,28 @@ namespace Github.NET.Sdk
 
         }
 
+        private static string _secret = string.Empty;
+        public static void RemoveSecretKey()
+        {
+            _client.DefaultRequestHeaders.Remove("Authorization");
+        }
+        public static void RecoverSecretKey()
+        {
+            _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {_secret}");
+        }
         public static void SetSecretByEnvKey(string envKey = "GITHUB_TOKEN")
         {
             var key = Environment.GetEnvironmentVariable(envKey);
-            _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {key}");
+            if (!string.IsNullOrEmpty(key))
+            {
+                _secret = key;
+                _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {_secret}");
+            }
         }
 #if DEBUG
         public static void SetSecret(string token)
         {
+            _secret = token;
             _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
         }
 #endif
