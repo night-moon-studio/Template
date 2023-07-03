@@ -31,8 +31,8 @@ jobs:
     - name: Upload dotnet test results
       uses: actions/upload-artifact@v3
       with:
-      name: dotnet-results
-      path: TestResults
+        name: dotnet-results
+        path: TestResults
 
     - name: Create Report
       uses: dorny/test-reporter@v1.6.0
