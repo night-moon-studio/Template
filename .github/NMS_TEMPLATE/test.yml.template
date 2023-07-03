@@ -33,7 +33,7 @@ ${{nms.tests}}
       with:
         check_name: 'UT Test - Ubuntu'
         files: |
-          test-results/**/*.trx
+          TestResults/**/*.trx
 
     - name: Publish Test Results
       if: matrix.os == 'macos-latest'
@@ -41,7 +41,7 @@ ${{nms.tests}}
       with:
         check_name: 'UT Test - Macos'
         files: |
-          test-results/**/*.trx
+          TestResults/**/*.trx
 
     - name: Publish Test Results
       if: matrix.os == 'windows-latest'
@@ -49,4 +49,4 @@ ${{nms.tests}}
       with:
         check_name: 'UT Test - Windows'
         files: |
-          test-results/**/*.trx
+          TestResults/**/*.trx
