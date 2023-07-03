@@ -26,19 +26,29 @@ jobs:
           7.0.x
 
     - name: 🚦 UnitTestProject UT Test
-      run: dotnet test './test/ut/UnitTestProject' --nologo -c Release -l "trx;LogFileName=UnitTestProject.trx" --results-directory "TestResults"
+      run: dotnet test './test/ut/UnitTestProject' --nologo -c Release -l "trx;LogFileName=UnitTestProject.${ runner.os }.trx" --results-directory "TestResults"
 
 
     - name: Publish Test Results
       if: matrix.os == 'ubuntu-latest'
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
+        check_name: 'UT Test - Ubuntu'
         files: |
           test-results/**/*.trx
 
     - name: Publish Test Results
-      if: matrix.os != 'ubuntu-latest'
+      if: matrix.os == 'macos-latest'
       uses: EnricoMi/publish-unit-test-result-action/composite@v2
       with:
+        check_name: 'UT Test - Macos'
+        files: |
+          test-results/**/*.trx
+
+    - name: Publish Test Results
+      if: matrix.os == 'windows-latest'
+      uses: EnricoMi/publish-unit-test-result-action/composite@v2
+      with:
+        check_name: 'UT Test - Windows'
         files: |
           test-results/**/*.trx
