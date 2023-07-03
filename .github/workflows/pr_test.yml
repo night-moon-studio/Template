@@ -28,11 +28,6 @@ jobs:
     - name: 🚦 UnitTestProject UT Test
       run: dotnet test './test/ut/UnitTestProject' --nologo -c Release -l "trx;LogFileName=UnitTestProject.trx" --results-directory "TestResults"
 
-    - name: Upload dotnet test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: dotnet-results
-        path: TestResults
 
     - name: Create Report
       uses: dorny/test-reporter@v1.6.0
