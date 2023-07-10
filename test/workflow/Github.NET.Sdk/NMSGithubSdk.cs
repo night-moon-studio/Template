@@ -94,7 +94,7 @@ namespace Github.NET.Sdk
                 if (recommends != null)
                 {
                     var comment = commentAction(recommends);
-                    GithubGraphRequest.RemoveSecretKey();
+                    //GithubGraphRequest.RemoveSecretKey();
                     (var commentResult, error) = await GithubSdk.IssueOrPullRequest.AddCommentAsync(currentItemId, comment);
                     if (!commentResult)
                     {
